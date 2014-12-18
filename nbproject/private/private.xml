@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Performance.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/config/database.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Processing_errors.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/views/layout/header.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/models/User_actions.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Settings.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Dashboard.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Mailbox.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Discipline.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Reports.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/models/Module_actions.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Skills.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Install.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/system/core/Model.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Profile.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Employees.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/views/layout/menu.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Welcome.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Recruiting.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/controllers/Timeoff.php</file>
+            <file>file:/C:/xampp/htdocs/EMS/application/views/layout/page_header.php</file>
+        </group>
+    </open-files>
+</project-private>

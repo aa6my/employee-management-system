@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="">
+        <div class="col-lg-offset-1 col-lg-10">
+            <div class="wrapper wrapper-content animated fadeInDown">
+                <div class="ibox-content">
+                    <h1>EMS - Human resources management system</h1>
+                    <ul class="unstyled space-30">
+                        <li>
+                            <a href="#config"><h3>Configuration</h3></a>
+                            <ul>
+                                <li><a href="#config_company">Company</a></li>
+                                <li><a href="#config_email">Email</a></li>
+                                <li><a href="#config_positions">Positions</a></li>
+                                <li><a href="#config_departments">Departments</a></li>
+                                <li><a href="#config_resign_reasons">Resign reasons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#dashboard"><h3>Dashboard</h3></a>
+                            <ul>
+                                <li><a href="#dashboard_index">Index</a></li>
+                                <li><a href="#dashboard_selfservice">Self service</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#recruiting"><h3>Recruiting</h3></a>
+                            <ul>
+                                <li><a href="#recruiting_vacancies">Vacancies</a></li>
+                                <li><a href="#recruiting_applicants">Applicants</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#employees"><h3>Employees</h3></a>
+                            <ul>
+                                <li><a href="#employees_details">Details</a></li>
+                                <li><a href="#employees_address">Address</a></li>
+                                <li><a href="#employees_education">Education</a></li>
+                                <li><a href="#employees_positions">Positions</a></li>
+                                <li><a href="#employees_skills">Skills</a></li>
+                                <li><a href="#employees_employment">Employment</a></li>
+                                <li><a href="#employees_family">Family</a></li>
+                                <li><a href="#employees_licenses">Licenses</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#skills"><h3>Skills</h3></a>
+                            <ul>
+                                <li><a href="#skills_categories">Categories</a></li>
+                                <li><a href="#skills_skills">Skills</a></li>
+                                <li><a href="#skills_assessments">Assessments</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#performance"><h3>Performance</h3></a>
+                            <ul>
+                                <li><a href="#performance_criteria">Criteria</a></li>
+                                <li><a href="#performance_appraisal">Appraisal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#discipline"><h3>Discipline</h3></a>
+                        </li>
+                        <li>
+                            <a href="#leave"><h3>Leave tracking</h3></a>
+                            <ul>
+                                <li><a href="#leave_requests">Requests</a></li>
+                                <li><a href="#leave_approved">Approved</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h2 id="config">Configuration</h2>
+                    <p>Allows to configures script according to your needs</p>
+                    <div class="m-l-lg">
+                        <h3 id="config_company">Company</h3>
+                        <p>Provides abilities to set all details about your company</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Email</li>
+                            <li>Phone</li>
+                            <li>Address</li>
+                            <li>City</li>
+                            <li>State</li>
+                            <li>Zip</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home / Settings / Company </div>
+                        </div>
+                        <h3 id="config_email">Email</h3>
+                        <p>Set options to send emails</p>
+                        <ul>
+                            <li>Email method (<code>smtp, mail(), sendmail()</code>)
+                                <ul>
+                                    <li>SMTP Server</li>
+                                    <li>SMTP User</li>
+                                    <li>SMTP Password</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home / Settings / Email </div>
+                        </div>
+                        
+                        <h3 id="config_positions">Positions</h3>
+                        <p>Save all positions in your company for next use in profiles. Postion includes</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Department</li>
+                            <li>Responsibilities</li>
+                            <li>Required skills</li>
+                        </ul>        
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home / Settings / Positions </div>
+                        </div>
+                        
+                        <h3 id="config_departments">Departments</h3>
+                        <p>Allows you to maintain departments and their hierarchy</p>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home / Settings / Departments </div>
+                        </div>
+                        
+                        <h3 id="config_resign_reasons">Resign reasons</h3>
+                        <p>Maintain all possible ways to fire employee</p>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home / Settings / Resign reasons </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="dashboard">Dashboard</h2>
+                    <p>Provides some statitics or serfservice features</p>
+                    <div class="m-l-lg">
+                        <h3 id="dashboard_index">Index</h3>
+                        <p>Containts brief information about employees</p>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home </div>
+                        </div>
+                        
+                        <h3 id="dashboard_selfservice">Self service</h3>
+                        <p>Allows for employee view all information about himself and send request for leave (holidays, sick)</p>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home </div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="recruiting">Recruiting</h2>
+                    <p>Gives abilities to store resumes and hire right person</p>
+                    <div class="m-l-lg">
+                        <h3 id="recruiting_vacancies">Vacancies</h3>
+                        <p>Create, describe vacancy and assign applicants for futher selection right person. Vacancy consist of</p>
+                        <ul>
+                            <li>Position</li>
+                            <li>Description about ideal applicant</li>
+                            <li>List of applicants</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Recruiting / Vacancies</div>
+                        </div>
+                        
+                        <h3 id="recruiting_applicants">Applicants</h3>
+                        <p>Save information about applicant for vacancy</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Phone</li>
+                            <li>Email</li>
+                            <li>Birth date</li>
+                            <li>Resume</li>
+                            <li>Advantages of applicant</li>
+                            <li>Disadvantages  of applicant</li>
+                            <li>Status of applicant (<code>Active, Enrolled, Ignored</code>)</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Recruiting / Vacancy</div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <h2 id="employees">Employees</h2>
+                    <p>Provides abilities to store all data about employees</p>
+                    <div class="m-l-lg">
+                        <h3 id="employees_details">Details</h3>
+                        <p>Details about employee consist of</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Avatar</li>
+                            <li>Email</li>
+                            <li>Gender</li>
+                            <li>SSN</li>
+                            <li>Birth date</li>
+                            <li>Status (<code>Active, Resigned</code>)</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_address">Address</h3>
+                        <p>Address of employee</p>
+                        <ul>
+                            <li>Address</li>
+                            <li>City</li>
+                            <li>State</li>
+                            <li>Zip</li>
+                            <li>Phone</li>
+                            <li>Cell</li>
+                            <li>Emergency contacts</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_education">Education</h3>
+                        <p>All information about education of employee</p>
+                        <ul>
+                            <li>Institution</li>
+                            <li>Description</li>
+                            <li>Start date</li>
+                            <li>End date</li>
+                            <li>Attachment</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_positions">Positions</h3>
+                        <p>Maintain information about positions in company</p>
+                        <ul>
+                            <li>Position name</li>
+                            <li>Start date</li>
+                            <li>End date</li>
+                            <li>Why hired</li>
+                            <li>Additional responsibilities</li>
+                        </ul>
+                        <p>And reason why fired/resigned</p>
+                        <ul>
+                            <li>Reason</li>
+                            <li>Date</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_skills">Skills</h3>
+                        <p>All skills what employee has</p>
+                        <ul>
+                            <li>Skill name</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_employment">Employment</h3>
+                        <p>Store all employment history</p>
+                        <ul>
+                            <li>Company</li>
+                            <li>Position</li>
+                            <li>Start date</li>
+                            <li>End date</li>
+                            <li>Responsibilities</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_family">Family</h3>
+                        <p>Allows to keep all relatives of employee</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Birth date</li>
+                            <li>Relationship</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                        
+                        <h3 id="employees_licenses">Licenses</h3>
+                        <p>Store data about all needed licenses for work</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Expiry</li>
+                            <li>Number</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Employees / Employee</div>
+                        </div>
+                    
+                    
+                    </div>
+                    
+                    <h2 id="skills">Skills</h2>
+                    <p>Helps categorize abilities and knowledge of employee</p>
+                    <div class="m-l-lg">
+                        <h3 id="skills_categories">Categories</h3>
+                        <p>Helps to group skills by category</p>
+                        <ul>
+                            <li>Name</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Skills / Categories</div>
+                        </div>
+                    
+                        <h3 id="skills_skills">Skills</h3>
+                        <p>Structures abilities and knowledge</p>
+                        <ul>
+                            <li>Name</li>
+                            <li>Category</li>
+                            <li>Requirements</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Skills / List</div>
+                        </div>
+                        
+                        <h3 id="skills_assessments">Assessments</h3>
+                        <p>Saves level of skill knowing</p>
+                        <ul>
+                            <li>Assessment name</li>
+                            <li>Employee name</li>
+                            <li>Skill knowing (rating and description)</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Skills / Assessments</div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <h2 id="performance">Performance</h2>
+                    <p>Saves information about performance of employee</p>
+                    <div class="m-l-lg">
+                        <h3 id="performance_criteria">Criteria</h3>
+                        <p>Helps set clear requirements for checks</p>
+                        <ul>
+                            <li>Name</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Performance / Criteria</div>
+                        </div>
+                        
+                        <h3 id="performance_appraisal">Appraisal</h3>
+                        <p>Sets expectations for employee and measure final results</p>
+                        <ul>
+                            <li>Start date</li>
+                            <li>End date</li>
+                            <li>Expectations</li>
+                            <li>Results</li>
+                            <li>
+                                <strong>Logs</strong> - determines progress of employee
+                                <ul>
+                                    <li>Description</li>
+                                    <li>Date</li>
+                                    <li>Criteria</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Performance / Appraisal</div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="discipline">Discipline</h2>
+                    <p>Saves all incidents with employee during work</p>
+                    <div class="m-l-lg">
+                        <h3>Incident</h3>
+                        <p>Saves all details about misconduct</p>
+                        <ul>
+                            <li>Headline</li>
+                            <li>Date</li>
+                            <li>Description</li>
+                            <li>Comment</li>
+                            <li>Taken actions</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Discipline / Incident</div>
+                        </div>
+                    </div>
+                    
+                    <h2 id="leave">Leave tracking</h2>
+                    <p>Tracks absent of employee during work</p>
+                    <div class="m-l-lg">
+                        <h3 id="leave_requests">Requests</h3>
+                        <p>Saves requests from employee for absent</p>
+                        <ul>
+                            <li>Employee</li>
+                            <li>Dates</li>
+                            <li>Comment</li>
+                            <li>Type (<code>Holidays, Vacation, Sick, Other</code>)</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Leave tracking / Requests</div>
+                        </div>
+                        
+                        <h3 id="leave_approved">Approved</h3>
+                        <p>List of approved requests from employee</p>
+                        <ul>
+                            <li>Employee</li>
+                            <li>Dates</li>
+                            <li>Status</li>
+                        </ul>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading"> Location </div>
+                            <div class="panel-body"> Home  /  Leave tracking / Approved</div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
