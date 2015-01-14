@@ -50,7 +50,7 @@ Needed software to be downloaded:
 1.	Unzip the Fat Free EMS zip file  and copy the folder  to C:\xampp\htdocs, then right click and rename the folder to employee-management-system
 2.	The folder structure should then be C:\xampp\htdocs\ employee-management-system
 3. Go to phpmyadmin, creata a database name "ems". Next, go to C:\xampp\htdocs\ employee-management-system and drag database.sql file into ems database.
-4. Then, go to https://localhost/employee-management-system/. In this page you have to enter all the required details.
+4. Then, go to https://localhost/employee-management-system/.
 
 ###**Tech**
 ___________________________________________

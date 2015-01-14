@@ -1,5 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
 require APPPATH.'/libraries/REST_Controller.php';
 
 class Api extends REST_Controller
@@ -11,6 +12,7 @@ class Api extends REST_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->url    = current_url();
+        $this->load->model('Api_model');
 
         /**
          * Set header for cross origin request(CORS)
@@ -56,7 +58,7 @@ class Api extends REST_Controller
         *
         *
         */
-        
+       
 
         if(($this->get('val') && !$this->get('key')) || ($this->get('key') && !$this->get('val')))
         {
@@ -70,8 +72,8 @@ class Api extends REST_Controller
         }
         
         
-        $type    =  $this->get('type'); // get type of table need to fetch data eg:|customers(user/type/customers)|
-        $key     =  $this->get('key');  // UNIQUE ID in table to fetch from eg : |customers(user/type/customers/fetch/all@specified/key/customer_id)
+        $type    =  $this->get('type'); // get type of table need to fetch data eg:|employees(user/type/employees)|
+        $key     =  $this->get('key');  // UNIQUE ID in table to fetch from eg : |employees(user/type/employees/fetch/all@specified/key/employee_id)
         $table   = $type;               // asign type into table variable
         
         
@@ -97,7 +99,7 @@ class Api extends REST_Controller
         {       
 
             /**
-             * if specified need and value for $key to fetch from eg : |customers(user/type/customers/val/2/key) == if no unique id just put none as a value
+             * if specified need and value for $key to fetch from eg : |employees(user/type/employees/val/2/key) == if no unique id just put none as a value
              * @var [type]
              */
             $value = $this->get('val');
@@ -176,7 +178,7 @@ class Api extends REST_Controller
          * example : type/customer-vendors/key/customer_id-vendor_id/12-30
          * Just separate by '-' symbols to delete multiple table
          * Single table example :
-         * example : type/customers/key/customer_id/val/12
+         * example : type/employees/key/employee_id/val/12
          *
          * Multiple table delete notes :
          *     - The 'type','key' and 'val' values must be in order form respectively
