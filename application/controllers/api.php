@@ -2,7 +2,7 @@
 
 require APPPATH.'/libraries/REST_Controller.php';
 
-class Apps extends REST_Controller
+class Api extends REST_Controller
 {
     public $url;
 
