@@ -79,6 +79,7 @@ class CI_Driver_Library {
 	 */
 	public function load_driver($child)
 	{
+
 		// Get CodeIgniter instance and subclass prefix
 		$prefix = config_item('subclass_prefix');
 
@@ -107,6 +108,7 @@ class CI_Driver_Library {
 		// Is there an extension?
 		$class_name = $prefix.$child_name;
 		$found = class_exists($class_name, FALSE);
+
 		if ( ! $found)
 		{
 			// Check for subclass file
@@ -118,6 +120,7 @@ class CI_Driver_Library {
 				{
 					// Yes - require base class from BASEPATH
 					$basepath = BASEPATH.'libraries/'.$this->lib_name.'/drivers/'.$child_name.'.php';
+					
 					if ( ! file_exists($basepath))
 					{
 						$msg = 'Unable to load the requested class: CI_'.$child_name;

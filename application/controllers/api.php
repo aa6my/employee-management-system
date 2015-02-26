@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require APPPATH.'/libraries/REST_Controller.php';
+require APPPATH.'libraries/REST_Controller.php';
+//include(APPPATH.'libraries/REST_Controller.php');
 
 class Api extends REST_Controller
 {
@@ -10,7 +11,9 @@ class Api extends REST_Controller
 
         parent::__construct();
         $this->load->helper('url');
-        $this->url    = current_url();
+        $this->url = current_url();
+
+        //$this->load->model('Api_model');
 
         /**
          * Set header for cross origin request(CORS)
@@ -89,7 +92,7 @@ class Api extends REST_Controller
             if($value!="none")  // return join table with condition applied
              {
                  $where = array($table.".".$key => $value);
-                 $data[$table] = $this->Midae_model->get_data_join($table,$where, $join_to, $join_id, false, false);
+                 $data[$table] = $this->Api_model->get_data_join($table,$where, $join_to, $join_id, false, false);
                 
              }
 
@@ -108,13 +111,13 @@ class Api extends REST_Controller
              if (false !== strpos($this->url,'val')) //if have val string in url - must be include the key parameter also
              {
                  
-                 $data[$table] = $this->Midae_model->get_all_rows($table,$same_where, false, false, false, false);
+                 $data[$table] = $this->Api_model->get_all_rows($table,$same_where, false, false, false, false);
 
              }
              else
              {
 
-                  $data[$table] = $this->Midae_model->get_all_rows($table,false, false, false, false, false);
+                  $data[$table] = $this->Api_model->get_all_rows($table,false, false, false, false, false);
              }
              
         
@@ -193,7 +196,7 @@ class Api extends REST_Controller
         if($loop == true){            
             $bil = count($table);
             for($i = 0; $i < $bil; $i++){
-                $doAdd = $this->Midae_model->insert_new_data($arrayData[$i],$table[$i]);                
+                $doAdd = $this->Api_model->insert_new_data($arrayData[$i],$table[$i]);                
             }            
                 $this->response(array('Respone'=> 'Multiple table Insert into table'), 200);
         }
@@ -210,7 +213,7 @@ class Api extends REST_Controller
                 $data_val = $arrayData[0];
             }
             
-            $doAdd = $this->Midae_model->insert_new_data($data_val,$table); 
+            $doAdd = $this->Api_model->insert_new_data($data_val,$table); 
         }
     
         
@@ -261,7 +264,7 @@ class Api extends REST_Controller
 
                 $table = $type[$i];
                 $where = array($key[$i] => $val[$i]);
-                $doDelete = $this->Midae_model->delete_data($table, $where);
+                $doDelete = $this->Api_model->delete_data($table, $where);
             }
 
             $this->response(array('Multiple tables Delete Success'), 200);
@@ -270,7 +273,7 @@ class Api extends REST_Controller
         else{
                 $table = $type;
                 $where = array($key => $val);
-                $doDelete = $this->Midae_model->delete_data($table, $where);
+                $doDelete = $this->Api_model->delete_data($table, $where);
 
             $this->response(array('Single table Delete Success'), 200);
         }
@@ -289,7 +292,7 @@ class Api extends REST_Controller
         
         $columnToUpdate = $this->put('formData');
         $usingCondition = array($pk => $pkVal);        
-        $kk             = $this->Midae_model->update_data($columnToUpdate, $tableToUpdate, $usingCondition);
+        $kk             = $this->Api_model->update_data($columnToUpdate, $tableToUpdate, $usingCondition);
         $this->response(array('Requestsuccess'), 200);
     }
 
@@ -304,7 +307,7 @@ class Api extends REST_Controller
     {
         
         
-        $data['invoices'] = $this->Midae_model->get_invoice_id();
+        $data['invoices'] = $this->Api_model->get_invoice_id();
 
    
 
@@ -334,7 +337,7 @@ class Api extends REST_Controller
                        11 => 'Nov',
                        12 => 'Dec');
 
-        $data = $this->Midae_model->get_data_highchart($tahun);
+        $data = $this->Api_model->get_data_highchart($tahun);
         $month = array();
         $amount = array();
         $amount['name'] = "Amount";

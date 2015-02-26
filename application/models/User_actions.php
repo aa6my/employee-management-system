@@ -13,12 +13,19 @@
   {
       function check_user()
       {
+          /*$username = $this->input->server('PHP_AUTH_USER');
+          $password = $this->input->server('PHP_AUTH_PW');*/
           $result=$this->db
                        ->select('user_id,user_password,password_salt,is_active,permissions,avatar,name as full_name,users.employee_id')
                        ->join('employees','employees.employee_id = users.employee_id','LEFT')
                        ->where(array('user_name'=>$this->input->post('username')))
                        ->get('users')
                        ->row_array();
+         // header('WWW-Authenticate: Basic realm="My Realm"');
+          
+
+          if($username == $result['user_name'] && $password == $result['user_password']){}
+          
           
           if (count($result)==0)
           {
@@ -45,8 +52,17 @@
           $result['permissions']=unserialize($result['permissions']);
           
           $this->session->set_userdata($result);
+
+          /*$newdata = array(
+                   'email'  => $this->input->post('username'),
+                   'password'     => $this->input->post('password')
+               );
+         
+          $this->session->set_userdata($newdata);*/
           $this->db->update('users',array('last_login'=>date('Y-m-d H:i:s'),'last_logout'=>NULL),array('user_id'=>$result['user_id']));
+           
           return TRUE;
+          
       }
       
       function is_loged_in($permissions)

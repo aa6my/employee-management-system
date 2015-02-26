@@ -10,7 +10,7 @@
 |	Default: FALSE
 |
 */
-$config['force_https'] = false;
+$config['force_https'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ $config['force_https'] = false;
 |	Default: xml
 |
 */
-$config['rest_default_format'] = 'JSON';
+$config['rest_default_format'] = 'xml';
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ $config['rest_message_field_name'] = 'error';
 |
 | Should we enable emulation of the request (e.g. used in Mootools request)?
 |
-|	Default: false
+|	Default: TRUE
 |
 */
 $config['enable_emulate_request'] = TRUE;
@@ -84,8 +84,7 @@ $config['rest_realm'] = 'REST API';
 |	'session' = check for PHP session variable. Set variable name below.
 |
 */
- //$config['rest_auth'] = 'basic';
-$config['rest_auth'] = false;
+$config['rest_auth'] = 'session';
 
 /*
 |--------------------------------------------------------------------------
@@ -100,7 +99,7 @@ $config['rest_auth'] = false;
 */
 
 //change this to '' for wildcard unit test
-$config['auth_source'] = 'library';
+$config['auth_source'] = 'email';
 
 /*
 |--------------------------------------------------------------------------
@@ -116,8 +115,8 @@ $config['auth_source'] = 'library';
 |	E.g: md5('admin:REST API:1234') = '1e957ebc35631ab22d5bd6526bd14ea2'
 |
 */
-$config['auth_library_class'] = 'Api_auth';
-$config['auth_library_function'] = 'login';
+$config['auth_library_class'] = 'Api_Auth';
+$config['auth_library_function'] = 'logi n';
 
 /*
 |--------------------------------------------------------------------------

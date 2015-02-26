@@ -199,6 +199,11 @@ abstract class REST_Controller extends CI_Controller
     {
         parent::__construct();
 
+        /*if (! class_exists('CI_Driver_Library'))
+            {
+                // We aren't instantiating an object here, just making the base class available
+                require BASEPATH.'libraries/Driver.php';
+            }*/
         // Start the timer for how long the request takes
         $this->_start_rtime = microtime(true);
 
@@ -207,6 +212,8 @@ abstract class REST_Controller extends CI_Controller
 
         // This library is bundled with REST_Controller 2.5+, but will eventually be part of CodeIgniter itself
         $this->load->library('format');
+        //print_r($this->session->userdata());
+
 
         // init objects
         $this->response     = new stdClass();
@@ -1366,6 +1373,9 @@ abstract class REST_Controller extends CI_Controller
      */
     protected function _check_php_session()
     {
+
+        //$this->load->library('session');
+        //$this->load->driver('session');
         $key = $this->config->item('auth_source');
         if (!$this->session->userdata($key)) {
             $this->response(array('status' => false, 'error' => 'Not Authorized'), 401);

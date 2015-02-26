@@ -8,7 +8,7 @@
     * @property CI_Session          $session
     */
 
-class Api_model extends Base_model
+class Api_model extends CI_Model
 {
   function __construct()
     {
