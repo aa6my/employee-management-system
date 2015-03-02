@@ -15,7 +15,6 @@
       {
           parent::__construct();
           $this->load->model('install_actions');
-          
           if (!$this->install_actions->is_installed())
           {
               if (!$this->install_actions->check_compability())

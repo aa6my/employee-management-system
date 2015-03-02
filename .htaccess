@@ -5,5 +5,5 @@
 </FilesMatch>
 
 RewriteEngine on
-RewriteCond $1 !^(index\.php|x|js|css|images|fonts|files|docs\.html|codecanyon\.html)
+RewriteCond $1 !^(index\.php|js|css|images|fonts|files|docs\.html|codecanyon\.html)
 RewriteRule ^(.*)$ index.php?/$1 [L]

@@ -22,7 +22,6 @@
           $this->load->model('user_actions');
           $this->load->model('module_actions');
           $this->user_actions->is_loged_in('selfservice');
-          
       }
       
       function index()

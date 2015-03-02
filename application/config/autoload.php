@@ -101,7 +101,7 @@ $autoload['libraries'] = array('database','driver','session');
 |	$autoload['drivers'] = array('session', 'cache');
 */
 
-$autoload['drivers'] = array('session');
+$autoload['drivers'] = array();
 
 
 /*
@@ -162,7 +162,7 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 
-$autoload['model'] = array('base_model','Api_model');
+$autoload['model'] = array('base_model');
 
 
 /* End of file autoload.php */

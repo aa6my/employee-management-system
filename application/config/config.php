@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | path to your installation.
 |
 */
-$config['base_url']    = 'http://localhost/ems/';
+$config['base_url']    = 'http://localhost/employee-management-system/';
 
 /*
 |--------------------------------------------------------------------------
@@ -307,7 +307,7 @@ $config['cache_path'] = '';
 | http://codeigniter.com/user_guide/libraries/sessions.html
 |
 */
-$config['encryption_key']    = '1219dc4705cba018157b94d5ef22f9250a3a0430';
+$config['encryption_key']    = 'asdkljhasuobasdasud';
 
 /*
 |--------------------------------------------------------------------------
