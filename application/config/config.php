@@ -307,7 +307,7 @@ $config['cache_path'] = '';
 | http://codeigniter.com/user_guide/libraries/sessions.html
 |
 */
-$config['encryption_key']    = 'asdkljhasuobasdasud';
+$config['encryption_key']    = '1219dc4705cba018157b94d5ef22f9250a3a0430';
 
 /*
 |--------------------------------------------------------------------------

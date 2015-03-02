@@ -112,3 +112,4 @@ define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
+define('INSTALLED',TRUE);
