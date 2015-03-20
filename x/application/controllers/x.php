@@ -302,6 +302,14 @@ class X extends REST_Controller
         var_dump($this->request->body);
     }
 
+    public function dataOrderBy_get(){
+        $table    =  $this->get('type');
+        $order_id    =  $this->get('order_id');
+        $order_val    =  $this->get('order_val');
+        $data[$table] = $this->Api_model->get_all_orderby($table, $order_id, $order_val);
+        $this->response($data, 200);
+    }
+
 
     
 

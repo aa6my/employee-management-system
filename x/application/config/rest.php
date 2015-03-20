@@ -84,7 +84,7 @@ $config['rest_realm'] = 'API EMS';
 |	'session' = check for PHP session variable. Set variable name below.
 |
 */
-$config['rest_auth'] = 'basic';
+$config['rest_auth'] = '';
 
 /*
 |--------------------------------------------------------------------------

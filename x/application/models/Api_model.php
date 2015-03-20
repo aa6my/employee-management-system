@@ -149,4 +149,15 @@ class Api_model extends CI_Model
 
 
     }
+
+    /** Api only */
+
+    public function get_all_orderby($table, $order_id, $order_val)
+    {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->order_by($order_id, $order_val);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
 }
