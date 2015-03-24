@@ -62,7 +62,7 @@ class X extends REST_Controller
         */
         
 
-        if(($this->get('val') && !$this->get('k ey')) || ($this->get('key') && !$this->get('val')))
+        if(($this->get('val') && !$this->get('key')) || ($this->get('key') && !$this->get('val')))
         {
             $this->response(array('error' => 'The key parameter and value parameter must have'), 400);
         }
@@ -89,12 +89,18 @@ class X extends REST_Controller
         {
             $value = $this->get('val');
 
-            if($value!="none")  // return join table with condition applied
+            if($value)  // return join table with condition applied
              {
                  $where = array($table.".".$key => $value);
                  $data[$table] = $this->Api_model->get_data_join($table,$where, $join_to, $join_id, false, false);
                 
              }
+             else
+             {
+                $data[$table] = $this->Api_model->get_data_join($table,false, $join_to, $join_id, false, false);
+             }
+
+             
 
         }
         else
@@ -206,14 +212,28 @@ class X extends REST_Controller
         else{
             
             $table = $type;
-            if(!isset($arrayData[0])){
-                $data_val = $arrayData;
+            //$this->response(array('Respone'=> sizeof($arrayData)), 200);
+                //print_r($arrayData);
+            if(count($arrayData) <=1)
+            {
+                if(!isset($arrayData[0])){
+                    $data_val = $arrayData;
+                }
+                else{
+                    $data_val = $arrayData[0];
+                }
+            
+                    $doAdd = $this->Api_model->insert_new_data($data_val,$table); 
+                    $this->response(array('Respone single'=> $arrayData), 200);
             }
-            else{
-                $data_val = $arrayData[0];
+            else
+            {
+                for($i = 0; $i < count($arrayData); $i++){
+                    $doAdd = $this->Api_model->insert_new_data($arrayData[$i],$table);                
+                }
+                    $this->response(array('Respone multiple'=> $arrayData), 200);
             }
             
-            $doAdd = $this->Api_model->insert_new_data($data_val,$table); 
         }
     
         
